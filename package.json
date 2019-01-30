@@ -1,0 +1,35 @@
+{
+  "name": "fantasyfootbalreact",
+  "version": "1.0.0",
+  "description": "Fantasy Football application using React",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.42.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.9"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "yarn start --prefix client",
+    "dev": "concurrently \"nodemon server.js\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hughescoding/FantasyFootbalReact.git"
+  },
+  "contributors": [
+    "Daniel Murphy",
+    "Michael Hughes"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hughescoding/FantasyFootbalReact/issues"
+  },
+  "homepage": "https://github.com/hughescoding/FantasyFootbalReact#readme"
+}
