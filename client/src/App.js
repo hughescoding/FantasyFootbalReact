@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import Users from "./components/Register/index";
 import './App.css';
 import Landing from "./pages/Landing";
@@ -8,6 +9,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Landing} />
+            {/* <Route exact path="/Login" component={Login} /> */}
+            {/* <Route exact path="/Home" component={Home} /> */}
+            {/* <Route exact path="/MyProfile/:id?" component={MyProfile} /> */}
+          </Switch>
+        </Router>
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -22,7 +31,7 @@ class App extends Component {
             Learn React
           </a>
         </header> */}
-        <Landing />
+        {/* <Landing /> */}
       </div>
     );
   }
