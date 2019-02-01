@@ -2,6 +2,7 @@ const express = require('express');
 const routes = require("./routes");
 const db = require("./models")
 const app = express();
+require('dotenv').config()
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // app.use(express.static("public"));

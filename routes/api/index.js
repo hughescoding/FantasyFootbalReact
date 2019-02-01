@@ -2,7 +2,10 @@
 const router = require("express").Router();
 const controller = require("../../controllers/usersController");
 
-router.route("/register")
+// router.route("/register")
+// .post(controller.create);
+
+router.route("/")
 .post(controller.create);
 
 module.exports = router;

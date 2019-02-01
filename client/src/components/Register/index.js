@@ -55,12 +55,14 @@ class Users extends Component {
               />
               <Input
                 value={this.state.email}
+                type="email"
                 onChange={this.handleInputChange}
                 name="email"
                 placeholder="Email (required)"
               />
               <Input
                 value={this.state.password}
+                type="password"
                 onChange={this.handleInputChange}
                 name="password"
                 placeholder="Password (required)"

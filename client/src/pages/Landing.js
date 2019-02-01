@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-// import Users from "./components/Register/index";
-import './App.css';
-import Landing from "./pages/Landing";
+// import logo from './logo.svg';
+import Users from "../components/Register/index";
+import './landing.css';
 
-class App extends Component {
+class Landing extends Component {
   render() {
     return (
-      <div className="App">
+      <div >
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -22,10 +21,10 @@ class App extends Component {
             Learn React
           </a>
         </header> */}
-        <Landing />
+        <Users />
       </div>
     );
   }
 }
 
-export default App;
+export default Landing;
