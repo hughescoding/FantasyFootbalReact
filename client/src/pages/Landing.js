@@ -24,8 +24,8 @@ class Landing extends Component {
           <section>
             <div className="container">
               <div className="card has-text-centered">
-                <div className="card-header has-text-centered has-text-justified">
-                  <p className="card-header-title has-text-centered">
+                <div className="card-header has-text-centered ">
+                  <p className="card-header-title is-centered">
                     Join Gridiron Kings
                 </p>
                 </div>
@@ -34,7 +34,7 @@ class Landing extends Component {
                     Tired of getting crushed in your weekly games?
                 </p>
                   <p className="content">
-                  It's time to Rule your League and play like a KING!
+                  It's time to rule your league and play like a KING!
                 </p>
                   <p className="content">
                   Win the title, command respect, win big money!
@@ -43,24 +43,25 @@ class Landing extends Component {
                   Join Gridiron Kings and begin your conquest! 
                 </p>
                 </div>
-                <section className="section"></section>
-                <div className="container"></div>
-                <h1>Line Goes Here</h1>
+               
+                {/* <h1>Line Goes Here</h1> */}
                 <footer className="card-footer">
                   <p className="card-footer-item">
                     <span>
-                      <a class="button is-primary is-rounded">Register Now</a>
+                      <a class="button is-warning is-outlined">Register Now</a>
                     </span>
                   </p>
                   <p class="card-footer-item">
                     <span>
-                      <a class="button is-primary is-rounded">Login</a>
+                      <a class="button is-warning is-outlined">Login</a>
                     </span>
                   </p>
                 </footer>
               </div>
             </div>
           </section>
+          <section className="section line"></section>
+                <div className="container"></div>
 
         </body>
 
