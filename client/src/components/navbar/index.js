@@ -11,9 +11,9 @@ import "bulma/css/bulma.css";
     return (
             <nav className="navbar" role="navigation" aria-label="main navigation">
               <div className="navbar-brand">
-                  <a className="navbar-item" href="https://bulma.io">
-                 <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"></img>
-                 </a>
+                  <div className="navbar-item">
+                 <img src="../../images/sm_helmet.png" width="112" height="28"></img>
+                 </div>
 
                   <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                   <span aria-hidden="true"></span>
@@ -25,33 +25,28 @@ import "bulma/css/bulma.css";
               <div id="navbarBasicExample" className="navbar-menu">
                 <div className="navbar-start">
                   <a className="navbar-item">
-                    Home
+                    Locker Room
                   </a>
 
                   <a className="navbar-item">
-                    Documentation
+                    About
                   </a>
 
                   <div className="navbar-item has-dropdown is-hoverable">
                     <a className="navbar-link">
-                      More
+                      League
                     </a>
 
                     <div className="navbar-dropdown">
                       <a className="navbar-item">
-                        About
+                        Create a League
                       </a>
                       <a className="navbar-item">
-                        Jobs
+                        Join a League
                       </a>
                       <a className="navbar-item">
                         Contact
                       </a>
-                      <div className="navbar-divider">
-                      <a className="navbar-item">
-                        Report an issue
-                      </a>
-                      </div>
                       
                     </div>
                   </div>
@@ -59,9 +54,9 @@ import "bulma/css/bulma.css";
 
                 <div className="navbar-end">
                   <div className="navbar-item">
-                    <div className="buttons">
-                      <a className="button is-light">
-                        Log in
+                    <div className="logout-button">
+                      <a className="button">
+                        Logout
                       </a>
                     </div>
                   </div>
