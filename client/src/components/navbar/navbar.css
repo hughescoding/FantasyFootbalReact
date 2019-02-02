@@ -1,0 +1,8 @@
+.navbar {
+    background-color: black;
+
+}
+
+.navbar-start, .navbar-item {
+    color: #ffcc00;
+}
