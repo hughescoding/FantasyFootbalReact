@@ -26,7 +26,7 @@ class Landing extends Component {
               <div className="card has-text-centered">
                 <div className="card-header has-text-centered ">
                   <p className="card-header-title is-centered">
-                    Join Gridiron Kings
+                    Join Gridiron Kings Today
                 </p>
                 </div>
                 <div className="card-content">
