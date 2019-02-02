@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Landing from "./pages/Landing";
 import LockerRoom from "./pages/LockerRoom";
+import Draft from "./pages/Draft";
 import './components/navbar/navbar.css'
 
 class App extends Component {
@@ -15,7 +16,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route exact path="/LockerRoom" component={LockerRoom} />
-            {/* <Route exact path="/Home" component={Home} /> */}
+            <Route exact path="/Draft" component={Draft} />
             {/* <Route exact path="/MyProfile/:id?" component={MyProfile} /> */}
           </Switch>
         </Router>

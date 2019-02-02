@@ -6,3 +6,12 @@
 .navbar-start, .navbar-item {
     color: #ffcc00;
 }
+
+.navbar-link:not(.is-arrowless)::after {
+    border-color: #ffcc00;
+}
+
+.button {
+    background-color: black;
+    border-color: #ffcc00;
+}
