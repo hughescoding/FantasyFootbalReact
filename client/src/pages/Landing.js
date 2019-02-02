@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import Users from "../components/Register/index";
 import Footer from "../components/Footer/Footer"
 import "bulma/css/bulma.css";
-import './landing.css';
+import './styles.css';
+
 
 class Landing extends Component {
   render() {
@@ -36,10 +37,10 @@ class Landing extends Component {
                   It's time to Rule your League and play like a KING!
                 </p>
                   <p className="content">
-                  Win the Title, command Repect, take the Money
+                  Win the title, command respect, win big money!
                 </p>
                   <p className="content">
-                  Join Gridiron Kings and begin your conquest
+                  Join Gridiron Kings and begin your conquest! 
                 </p>
                 </div>
                 <footer className="card-footer">
