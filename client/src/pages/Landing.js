@@ -12,6 +12,7 @@ class Landing extends Component {
       <div >
         <body>
           <section className="section">
+          <img src="/images/logo-banner.jpg" alt="Logo"></img>
             <div className="container">
               <h1 className="title">Title</h1>
               <h2 className="subtitle">
