@@ -14,11 +14,11 @@ class Landing extends Component {
           <section className="section">
           <img src="/images/logo-banner.jpg" alt="Logo"></img>
             <div className="container">
-              <h1 className="title">Title</h1>
+              {/* <h1 className="title">Title</h1>
               <h2 className="subtitle">
                 A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
                 <strong>A LOGO WILL GO HERE</strong>
-              </h2>
+              </h2> */}
             </div>
           </section>
           <section>
@@ -43,6 +43,9 @@ class Landing extends Component {
                   Join Gridiron Kings and begin your conquest! 
                 </p>
                 </div>
+                <section className="section"></section>
+                <div className="container"></div>
+                <h1>Line Goes Here</h1>
                 <footer className="card-footer">
                   <p className="card-footer-item">
                     <span>
