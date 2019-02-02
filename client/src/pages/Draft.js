@@ -22,7 +22,7 @@ class Draft extends Component {
                 </div>
                 <div className="card-content">
                   <p className="content">
-                    Draft Page  
+                    Draft Page- we draft so hard
                   </p>
                 </div>
               </div>
