@@ -1,3 +1,14 @@
 body {
     background-image: url(/images/grass.png);
 }
+.line {
+    background-image: url(/images/grass.png);
+}
+.card {
+    background-color: black;
+    color: #ffcc00
+}
+.card-header-title {
+    background-color: black;
+    color: #ffcc00
+}
