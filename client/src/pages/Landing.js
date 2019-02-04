@@ -1,12 +1,54 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import Users from "../components/Register/index";
-import Footer from "../components/Footer/Footer"
+import RegistrationModal from "../components/RegistrationModal/index";
+import LoginModal from "../components/LoginModal/index";
+import Footer from "../components/Footer/Footer";
 import "bulma/css/bulma.css";
 import './styles.css';
 
 
 class Landing extends Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      modalState: {
+        register: false,
+        login: false
+      }
+    };
+    
+    this.toggleModal = this.toggleModal.bind(this);
+  }
+  
+  toggleModal(whichModal) {   
+      let oldLogin = this.state.modalState.login
+      let oldRegister = this.state.modalState.register
+      let newLogin = oldLogin
+      let newRegister = oldRegister
+
+      if (whichModal === 'register') {
+        newRegister = !oldRegister
+        this.setState({modalState: {
+          register: newRegister
+        }})
+      } else {
+        newLogin = !oldLogin
+        this.setState({modalState: {
+          login: newLogin
+        }})
+      }
+
+      // console.log(newRegister + " " + newLogin)
+      // this.setState({modalState: {
+      //   register: newRegister,
+      //   login: newLogin
+      // }
+      // })
+  } 
+
+
   render() {
     return (
       <div >
@@ -48,12 +90,12 @@ class Landing extends Component {
                 <footer className="card-footer">
                   <p className="card-footer-item">
                     <span>
-                      <a class="button is-warning is-outlined">Register Now</a>
+                      <a class="button is-warning is-outlined" onClick={() => {this.toggleModal("register")}}>Register Now</a>
                     </span>
                   </p>
-                  <p class="card-footer-item">
+                  <p className="card-footer-item">
                     <span>
-                      <a class="button is-warning is-outlined">Login</a>
+                      <a className="button is-warning is-outlined" onClick={() => {this.toggleModal("login")}}>Login</a>
                     </span>
                   </p>
                 </footer>
@@ -64,6 +106,20 @@ class Landing extends Component {
                 <div className="container"></div>
 
         </body>
+        <RegistrationModal 
+            closeModal={this.toggleModal} 
+            modalState={this.state.modalState.register} 
+            title="Create your Kingdom"
+          >
+          <Users />
+          </RegistrationModal>
+          <LoginModal 
+            closeModal={this.toggleModal} 
+            modalState={this.state.modalState.login} 
+            title="Login"
+          >
+          
+          </LoginModal>
 
         <Footer />
       </div>
