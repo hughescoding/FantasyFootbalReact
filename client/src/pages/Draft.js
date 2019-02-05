@@ -5,9 +5,9 @@ import Footer from "../components/Footer/Footer";
 import API from "../utils/API";
 import "bulma/css/bulma.css";
 import './styles.css';
-=======
 import DraftTable from '../components/DraftTable/DraftTable';
 let players= [];
+
 class Draft extends Component {
 
   state = {
@@ -34,8 +34,8 @@ class Draft extends Component {
         <body>
               <Nav
               getPlayers={this.getPlayers}
-              />           
-              <DraftTable/>
+              />   
+              <DraftTable/>         
         </body>
         <Footer />
       </div>
