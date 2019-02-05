@@ -4,7 +4,8 @@ import Nav from "../components/navbar/index";
 import Footer from "../components/Footer/Footer"
 import "bulma/css/bulma.css";
 import './styles.css';
-import DraftTable from '../components/DraftTable/DraftTable';
+import DraftTable from '../components/DraftTable/index';
+import DraftTableBody from '../components/DraftTableBody/index';
 
 
 class Draft extends Component {
@@ -13,7 +14,9 @@ class Draft extends Component {
       <div >
         <body>
               <Nav/>  
-              <DraftTable/>         
+              <DraftTable/>
+              <DraftTableBody/>
+
 
         </body>
 
