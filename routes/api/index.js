@@ -8,6 +8,9 @@ const controller = require("../../controllers/usersController");
 router.route("/")
 .post(controller.create);
 
+router.route("/players")
+.get(controller.findAll);
+
 module.exports = router;
 
 // var db = require("../../models");

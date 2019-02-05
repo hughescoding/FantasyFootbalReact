@@ -435,12 +435,12 @@ VALUES
 	(430,430,'Seth DeValve','CLE','TE59','TE',11,344.0,Null,'2018-12-28','2018-12-28');
 
 
-INSERT INTO `users` (`id`, `password`,`email`,`createdAt`, `updatedAt`)
-VALUES
+-- INSERT INTO `users` (`id`, `password`,`email`,`createdAt`, `updatedAt`)
+-- VALUES
 
-	(1,'password1','tugs.murphy@yahoo.com','2018-12-28','2018-12-28');
+-- 	(1,'password1','tugs.murphy@yahoo.com','2018-12-28','2018-12-28');
 
-INSERT INTO `teams` (`id`, `name`,`createdAt`, `updatedAt`, `UserId`)
-VALUES
+-- INSERT INTO `teams` (`id`, `name`,`createdAt`, `updatedAt`, `UserId`)
+-- VALUES
 
-	(1,'Test-Team','2018-12-28','2018-12-28',1);
+-- 	(1,'Test-Team','2018-12-28','2018-12-28',1);

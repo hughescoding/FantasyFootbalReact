@@ -7,7 +7,7 @@ import "bulma/css/bulma.css";
 
 
 
-  function Nav() {
+  function Nav(props) {
     return (
             <nav className="navbar" role="navigation" aria-label="main navigation">
               <div className="navbar-brand">
@@ -44,7 +44,7 @@ import "bulma/css/bulma.css";
                       <a className="navbar-item">
                         Join a League
                       </a>
-                      <a className="navbar-item">
+                      <a className="navbar-item" onClick={props.getPlayers}>
                         Contact
                       </a>
                       
