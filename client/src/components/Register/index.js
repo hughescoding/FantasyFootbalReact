@@ -9,7 +9,6 @@ import './register.css';
 
 class Users extends Component {
     state = {
-        books: [],
         name: "",
         email: "",
         password: ""
