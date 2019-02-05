@@ -5,7 +5,12 @@ import Footer from "../components/Footer/Footer";
 import API from "../utils/API";
 import "bulma/css/bulma.css";
 import './styles.css';
+<<<<<<< HEAD
 let players= [];
+=======
+import DraftTable from '../components/DraftTable/DraftTable';
+
+>>>>>>> master
 
 class Draft extends Component {
 
@@ -33,23 +38,8 @@ class Draft extends Component {
         <body>
               <Nav
               getPlayers={this.getPlayers}
-              />           
-          <section>
-            <div className="container">
-              <div className="card has-text-centered">
-                <div className="card-header has-text-centered has-text-justified">
-                  <p className="card-header-title has-text-centered">
-                    Join Gridiron Kings
-                </p>
-                </div>
-                <div className="card-content">
-                  <p className="content">
-                    Draft Page  
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+              />   
+              <DraftTable/>         
 
         </body>
 

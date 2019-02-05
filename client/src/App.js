@@ -6,7 +6,8 @@ import './App.css';
 import Landing from "./pages/Landing";
 import LockerRoom from "./pages/LockerRoom";
 import Draft from "./pages/Draft";
-import './components/navbar/navbar.css'
+import './components/navbar/navbar.css';
+import './components/DraftTable/DraftTable.css';
 
 class App extends Component {
   render() {
