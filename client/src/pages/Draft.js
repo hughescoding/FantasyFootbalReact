@@ -5,12 +5,8 @@ import Footer from "../components/Footer/Footer";
 import API from "../utils/API";
 import "bulma/css/bulma.css";
 import './styles.css';
-<<<<<<< HEAD
-let players= [];
-=======
 import DraftTable from '../components/DraftTable/DraftTable';
-
->>>>>>> master
+let players= [];
 
 class Draft extends Component {
 
@@ -40,9 +36,7 @@ class Draft extends Component {
               getPlayers={this.getPlayers}
               />   
               <DraftTable/>         
-
         </body>
-
         <Footer />
       </div>
     );
