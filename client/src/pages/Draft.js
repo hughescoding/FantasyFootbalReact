@@ -5,7 +5,9 @@ import Footer from "../components/Footer/Footer";
 import API from "../utils/API";
 import "bulma/css/bulma.css";
 import './styles.css';
-import DraftTable from '../components/DraftTable/DraftTable';
+import DraftTable from '../components/DraftTable/index';
+import DraftTableBody from '../components/DraftTableBody/index';
+
 let players= [];
 
 class Draft extends Component {
@@ -35,7 +37,8 @@ class Draft extends Component {
               <Nav
               getPlayers={this.getPlayers}
               />   
-              <DraftTable/>         
+              <DraftTable/>
+              <DraftTableBody/>         
         </body>
         <Footer />
       </div>
