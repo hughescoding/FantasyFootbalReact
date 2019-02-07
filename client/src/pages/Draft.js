@@ -38,7 +38,7 @@ class Draft extends Component {
               <Nav
               getPlayers={this.getPlayers}
               />   
-              <DraftTable/>
+              {/* <DraftTable/> */}
               <DraftTableBody/>         
         </body>
         <Footer />
