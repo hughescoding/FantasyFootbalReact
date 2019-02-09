@@ -126,17 +126,9 @@ class Landing extends Component {
                 <div className="container"></div>
                 <div className="container"></div>
         </body>
-<<<<<<< HEAD
-        
-
-        <Footer />
-        <RegistrationModal 
-            closeModal={this.toggleModal} 
-=======
 
          <RegistrationModal 
             closeModal={() => {this.toggleModal("register")}} 
->>>>>>> master
             modalState={this.state.modalState.register} 
             title="Create your Kingdom"
           >
@@ -150,12 +142,9 @@ class Landing extends Component {
           >
           <LoginForm />
           </LoginModal>
-<<<<<<< HEAD
-=======
           
           
         <Footer />
->>>>>>> master
       </div>
     );
   }
