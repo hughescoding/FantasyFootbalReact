@@ -4,11 +4,26 @@ import Users from "../components/Register/index";
 import RegistrationModal from "../components/RegistrationModal/index";
 import LoginModal from "../components/LoginModal/index";
 import Footer from "../components/Footer/Footer";
+import LoginForm from "../components/LoginForm/index";
+// import RegisterDialog from "../components/RegisterDialog/index";
 import "bulma/css/bulma.css";
 import './styles.css';
 
 
 class Landing extends Component {
+//   constructor(props) {
+//     super(props);
+
+//   this.state = {
+//     registerOpen: false,
+//   };
+// }
+
+//   handleClickOpen = (dlog) => {
+//     if (dlog === 'register')
+//     this.setState({ registerOpen: true });
+//   };
+  
   constructor(props) {
     super(props);
     
@@ -28,15 +43,20 @@ class Landing extends Component {
       let newLogin = oldLogin
       let newRegister = oldRegister
 
-      if (whichModal === 'register') {
+      if (whichModal === "register") {
+
         newRegister = !oldRegister
         this.setState({modalState: {
-          register: newRegister
+          register: newRegister,
+        
+          
         }})
       } else {
+
         newLogin = !oldLogin
         this.setState({modalState: {
-          login: newLogin
+          login: newLogin,
+          
         }})
       }
 
@@ -106,21 +126,24 @@ class Landing extends Component {
                 <div className="container"></div>
 
         </body>
-        <RegistrationModal 
-            closeModal={this.toggleModal} 
+
+         <RegistrationModal 
+            closeModal={() => {this.toggleModal("register")}} 
             modalState={this.state.modalState.register} 
             title="Create your Kingdom"
           >
           <Users />
           </RegistrationModal>
+         
           <LoginModal 
-            closeModal={this.toggleModal} 
+            closeModal={() => {this.toggleModal("login")}} 
             modalState={this.state.modalState.login} 
             title="Login"
           >
-          
+          <LoginForm />
           </LoginModal>
-
+          
+          
         <Footer />
       </div>
     );

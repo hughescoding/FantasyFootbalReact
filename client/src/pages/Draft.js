@@ -41,7 +41,7 @@ class Draft extends Component {
               {/* <DraftTable/> */}
               <DraftTableBody/>         
         </body>
-        <Footer />
+        <Footer/>
       </div>
     );
   }
