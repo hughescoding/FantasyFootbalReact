@@ -104,8 +104,11 @@ class Landing extends Component {
           </section>
           <section className="section line"></section>
                 <div className="container"></div>
-
+                <div className="container"></div>
         </body>
+        
+
+        <Footer />
         <RegistrationModal 
             closeModal={this.toggleModal} 
             modalState={this.state.modalState.register} 
@@ -120,8 +123,6 @@ class Landing extends Component {
           >
           
           </LoginModal>
-
-        <Footer />
       </div>
     );
   }
