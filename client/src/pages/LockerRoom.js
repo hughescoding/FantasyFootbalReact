@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import Nav from "../components/navbar/index";
+<<<<<<< HEAD
+// import News from "../components/News/news";
+=======
+>>>>>>> master
 import Footer from "../components/Footer/Footer";
 import "bulma/css/bulma.css";
 import './styles.css';
@@ -22,8 +26,13 @@ class LockerRoom extends Component {
                 </div>
                 <div className="card-content">
                   <p className="content">
+<<<<<<< HEAD
+                    Lockerroom you fools!!!!                </p>
+            {/* <News/> */}
+=======
                     Lockerroom you fools!!!!   
                   </p>
+>>>>>>> master
                 </div>
               </div>
             </div>
