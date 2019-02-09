@@ -32,12 +32,13 @@ class Draft extends Component {
     return (
       <div >
         <body>
-              <Nav
-              getPlayers={this.getPlayers}
-              />   
-              <DraftTable/>         
+          <Nav
+            getPlayers={this.getPlayers}
+          />   
+          <DraftTable
+          />         
         </body>
-        <Footer />
+        <Footer/>
       </div>
     );
   }

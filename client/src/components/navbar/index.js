@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import API from "../../utils/API";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Input, FormBtn } from "../Form";
 import "bulma/css/bulma.css";
 
@@ -51,7 +51,6 @@ import "bulma/css/bulma.css";
                     </div>
                   </div>
                 </div>
-
                 <div className="navbar-end">
                   <div className="navbar-item">
                     <div className="logout-button">
