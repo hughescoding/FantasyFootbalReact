@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Nav from "../components/navbar/index";
 import Footer from "../components/Footer/Footer";
 import "bulma/css/bulma.css";
-
+import './styles.css';
 
 
 class LockerRoom extends Component {

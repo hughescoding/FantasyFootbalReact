@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import API from "../../utils/API";
-import { Link } from "react-router-dom";
+// import API from "../../utils/API";
+// import { Link } from "react-router-dom";
 import { Input, FormBtn } from "../Form";
 import "bulma/css/bulma.css";
 
@@ -11,9 +11,10 @@ import "bulma/css/bulma.css";
     return (
             <nav className="navbar" role="navigation" aria-label="main navigation">
               <div className="navbar-brand">
-                  <div className="navbar-item">
-                 <img src="../../images/sm_helmet.png" width="112" height="28"></img>
-                 </div>
+              <img src="../../images/sm732.png" ></img>
+                  {/* <div className="navbar-item">
+                 {/* <img src="../../images/sm732.png" ></img> */}
+                 {/* </div> */} 
 
                   <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                   <span aria-hidden="true"></span>
