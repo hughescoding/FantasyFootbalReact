@@ -8,25 +8,26 @@ import './styles.css';
 import DraftTable from '../components/DraftTable/index';
 import DraftTableBody from '../components/DraftTableBody/index';
 
-let players= [];
+// let players= [];
 
 class Draft extends Component {
 
-  state = {
+  // state = {
 
-    players: []
+  //   players: []
 
-  };
-  getPlayers = (event) => {
-    event.preventDefault();
-      API.getPlayers({})
-        .then(res => players.push(res.data))
+  // };
+  // getPlayers = (event) => {
+  //   event.preventDefault();
+  //     API.getPlayers({})
+  //       .then(res => this.setState({players: res.data}, ()=>{
+  //         console.log(this.state.players);
+  //       }))
       
-        // .then(res => this.loadBooks())
-        .catch(err => console.log(err));
-        console.log(players)
+  //       // .then(res => this.loadBooks())
+  //       .catch(err => console.log(err));
   
-  }
+  // }
 
 
 
@@ -37,10 +38,10 @@ class Draft extends Component {
               <Nav
               getPlayers={this.getPlayers}
               />   
-              <DraftTable/>
+              {/* <DraftTable/> */}
               <DraftTableBody/>         
         </body>
-        <Footer />
+        <Footer/>
       </div>
     );
   }
