@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import Nav from "../components/navbar/index";
-import Footer from "../components/Footer/Footer"
+import Footer from "../components/Footer/Footer";
 import "bulma/css/bulma.css";
 import './styles.css';
 
@@ -22,15 +22,13 @@ class LockerRoom extends Component {
                 </div>
                 <div className="card-content">
                   <p className="content">
-                    Lockerroom you fools!!!!                </p>
-            
+                    Lockerroom you fools!!!!   
+                  </p>
                 </div>
               </div>
             </div>
           </section>
-
         </body>
-
         <Footer />
       </div>
     );

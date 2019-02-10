@@ -44,7 +44,7 @@ class Draft extends Component {
               <DraftedTeam/> 
               </div>       
         </body>
-        {/* <Footer /> */}
+        <Footer/>
       </div>
     );
   }

@@ -3,13 +3,12 @@ import API from "../../utils/API";
 // import { Link } from "react-router-dom";
 import { Input, FormBtn } from "../Form";
 
-import './register.css';
+// import './register.css';
 
 
 
-class Users extends Component {
+class LoginForm extends Component {
     state = {
-        name: "",
         email: "",
         password: ""
       };
@@ -21,11 +20,11 @@ class Users extends Component {
         });
       };
       
+    //   function needs to change to login function not save User, when authentication is in place
       handleFormSubmit = event => {
         event.preventDefault();
-        if (this.state.name && this.state.email && this.state.password) {
+        if (this.state.email && this.state.password) {
           API.saveUser({
-            name: this.state.name,
             email: this.state.email,
             password: this.state.password
           })
@@ -44,14 +43,8 @@ class Users extends Component {
   render() {
     return (
       <div>
-        <h2>Register</h2>
+        <h2>Login</h2>
         <form>
-              <Input
-                value={this.state.name}
-                onChange={this.handleInputChange}
-                name="name"
-                placeholder="Name (required)"
-              />
               <Input
                 value={this.state.email}
                 type="email"
@@ -67,10 +60,10 @@ class Users extends Component {
                 placeholder="Password (required)"
               />
               <FormBtn
-                disabled={!(this.state.name && this.state.email && this.state.password)}
+                disabled={!(this.state.email && this.state.password)}
                 onClick={this.handleFormSubmit}
               >
-                Register
+                Login
               </FormBtn>
             </form>
       </div>
@@ -78,4 +71,4 @@ class Users extends Component {
   }
 }
 
-export default Users;
+export default LoginForm;
