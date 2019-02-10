@@ -1,4 +1,5 @@
 import React from "react";
+import "bulma/css/bulma.css";
 import "./registrationModal.css";
 const RegistrationModal = ({ children, closeModal, modalState, title }) => {
     if(!modalState) {
@@ -19,7 +20,7 @@ const RegistrationModal = ({ children, closeModal, modalState, title }) => {
             </div>
           </section>
           <footer className="modal-card-foot">
-            <a className="button" onClick={closeModal}>Cancel</a>
+            {/* <a className="button" onClick={closeModal}>Cancel</a> */}
           </footer>
         </div>
       </div>
