@@ -8,5 +8,12 @@ td {
 
   .table {
       width: 830px;
+      /* float: left; */
      
+  }
+
+  .dropdown {
+    border: 1px solid black;
+    margin: 5px;
+    width: 100%;   
   }
