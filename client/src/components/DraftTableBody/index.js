@@ -3,15 +3,19 @@ import "./DraftTableBody.css"
 import API from "../../utils/API";
 import DraftButton from "../DraftButton"
 
-let players= [];
+// let player= [];
 
 class DraftTableBody extends Component {
 
 
-
-    state = {
-        players: []    
+constructor (props) {
+    super(props)
+    this.state = {
+        players: [],
+        playerPosition: ''
       };
+    }
+      
 
       getPlayers = (event) => {
         event.preventDefault();
@@ -30,20 +34,36 @@ class DraftTableBody extends Component {
         window.addEventListener('load', this.getPlayers);
      }   
 
+     //Thank you Ben! 
+     filterPlayers = (player) => {
+        return (player.player_position === this.state.playerPosition || this.state.playerPosition === '')
+     }
+    
+     onChange = (event) => {
+
+           this.setState(
+               {
+                   playerPosition: event.target.value
+               }
+           )
+     }
+
    render () { 
        console.log(this.state)  
-    return (<div className="table">
+    return (
+    // <div className="container">
+    <div className="table">
         
         <div className="input-field col s12">
-            <select id="filter">
-                <option value="" disabled selected>Filter Player's by Position</option>
-                <option value="qb">Quarter Backs</option>
-                <option value="rb">Running Backs</option>
-                <option value="wr">Wide Recievers</option>
-                <option value="te">Tight Ends</option>
-                <option value="ds">Defense</option>
-                <option value="k">Kickers</option>
-                <option value="null">Available Players</option>
+            <select onChange={this.onChange} className="dropdown">
+                <option value="" disabled selected>Filter Players by Position</option>
+                <option value="QB">Quarter Backs</option>
+                <option value="RB">Running Backs</option>
+                <option value="WR">Wide Receivers</option>
+                <option value="TE">Tight Ends</option>
+                <option value="DS">Defense</option>
+                <option value="K">Kickers</option>
+                <option value="" >Available Players</option>
             </select>
 
             </div>
@@ -59,7 +79,7 @@ class DraftTableBody extends Component {
                 </tr>
             </thead>
             
-              { this.state.players.map (player=> 
+              { this.state.players.filter(this.filterPlayers).map (player=> 
         ( 
             
             
@@ -79,7 +99,9 @@ class DraftTableBody extends Component {
         )
     )
 }
-    </div>)
+    </div>
+    // </div>
+    )
  
 }
 }
