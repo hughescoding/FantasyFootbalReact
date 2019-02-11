@@ -8,7 +8,7 @@ const db = require("./models");
 const app = express();
 require('dotenv').config()
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 // app.use(express.static("public"));
 
 // use the cookie-parser to help with auth token, 
@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === "production") {
 // Routes
 app.use(routes);
 
-var syncOptions = { force: true};
+var syncOptions = { force: false};
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
