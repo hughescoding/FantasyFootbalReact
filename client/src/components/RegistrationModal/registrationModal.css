@@ -1,0 +1,24 @@
+ .modal-card-body {
+    background-color: black;
+}
+
+.modal-card-foot, .modal-card-head {
+    background-image: url(/images/pigskin.jpg);
+}
+
+.modal-card-title, .content h2 {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+button.btn.btn-success {
+    background-color: #ffcc00;
+    color: black;
+    border: white; 
+    margin-right: 257px;
+}
+
+
+
+
+

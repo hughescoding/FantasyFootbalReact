@@ -124,7 +124,7 @@ class Landing extends Component {
           </section>
           <section className="section line"></section>
                 <div className="container"></div>
-
+                <div className="container"></div>
         </body>
 
          <RegistrationModal 
