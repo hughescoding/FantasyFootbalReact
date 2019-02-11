@@ -5,7 +5,7 @@ const controller = require("../../controllers/usersController");
 // router.route("/register")
 // .post(controller.create);
 
-router.route("/")
+router.route("/register")
 .post(controller.create);
 
 router.route("/players")
