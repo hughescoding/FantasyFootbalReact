@@ -1,11 +1,20 @@
 const express = require('express');
 const routes = require("./routes");
-const db = require("./models")
+// const bodyParser = require('body-parser');
+// const customAuthMiddleware = require('./middleware/custom-auth-middleware');
+const path = require('path');
+// const cookieParser = require('cookie-parser');
+const db = require("./models");
 const app = express();
 require('dotenv').config()
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 // app.use(express.static("public"));
+
+// use the cookie-parser to help with auth token, 
+// it must come before the customAuthMiddleware
+// app.use(cookieParser());
+// app.use(customAuthMiddleware);
 
 
 if (process.env.NODE_ENV === "production") {
@@ -17,7 +26,7 @@ if (process.env.NODE_ENV === "production") {
 // Routes
 app.use(routes);
 
-var syncOptions = { force: false };
+var syncOptions = { force: false};
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
