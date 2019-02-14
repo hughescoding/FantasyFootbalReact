@@ -6,13 +6,14 @@ import "./footer.css"
 
 export function Footer() {
     return (
-        <footer className="footer">
-            <div className="content has-text-centered">
+       <footer className="footer">
+            {/* <div className="content has-text-centered foot"> */}
                 <p>
-                    Here lies the Footer of all Footers
+                     Gridiron Kings © 2019
                 </p>
-            </div>
-        </footer>
+            {/* </div> */}
+
+       </footer>
     );
 }
 

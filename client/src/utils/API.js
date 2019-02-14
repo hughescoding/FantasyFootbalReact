@@ -9,4 +9,7 @@ export default {
   saveUser: function(userData) {
     return axios.post("/api/", userData);
   }
+
 };
+
+

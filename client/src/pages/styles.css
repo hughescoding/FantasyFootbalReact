@@ -9,11 +9,29 @@ body {
     color: #ffcc00
 }
 .card-header-title {
+    /* background-image: url(/images/pigskin.jpg); */
     background-color: black;
-    color: #ffcc00
+    color: #ffcc00;
+    border-radius: 10px;
+    font-size: 30px;
+    
 }
 
 .container {
     margin-top: 20px;
     overflow: auto;
+}
+
+.card-header {
+    background-image: url(/images/pigskin.jpg);
+}
+
+.card-footer {
+    background-image: url(/images/pigskin.jpg);
+}
+
+.button.is-warning.is-outlined {
+    background-color: black;
+    border-color: #ffcc00;
+    color: #ffcc00;
 }
