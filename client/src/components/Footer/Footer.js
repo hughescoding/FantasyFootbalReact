@@ -11,6 +11,7 @@ export function Footer() {
                 <p>
                     Here lies the Footer of all Footers
                 </p>
+                
             </div>
         </footer>
     );
