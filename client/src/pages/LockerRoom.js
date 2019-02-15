@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import Nav from "../components/navbar/index";
 import Footer from "../components/Footer/Footer";
+import DraftedTeam from "../components/DraftedTeam/index";
 import "bulma/css/bulma.css";
 import './styles.css';
-import DraftButton from "../components/DraftButton";
 import axios from "axios";
 import key from "./config.js";
 
@@ -34,26 +34,45 @@ class LockerRoom extends Component {
             <div className="container">
               <div className="card has-text-centered">
                 <div className="card-header has-text-centered has-text-justified">
-                  <p className="card-header-title has-text-centered">
+                  <p className="card-header-title is-centered">
                     Join Gridiron Kings
                 </p>
                 </div>
-                <div className="card-content">
-                  <p className="content">
-                    Lockerroom you fools!!!!   
-                  </p>
-                  <DraftButton onClick = {this.getArticles}/>
+                <div className="draftedTeam">
+                <DraftedTeam/>
+                </div>
+
+                <div className="card-content has-text-centered">
+  
+                  <button className="button news-button" onClick = {this.getArticles}>Get News</button>
+                  <br></br>
+                  <hr></hr>
+                  <thead>
+                <tr>
+                    <th className= "artTitle" scope="col">Title</th>
+                    {/* <th className="artAuthor" scope="col">Author</th> */}
+                    <th className="description" scope="col">Description</th>
+                    <th className="link" scope="col">Link</th>
+                    
+                </tr>
+            </thead>
+
                   { this.state.articles.map (article=> 
         ( 
+
+          
             
-            <tbody id="a-players">
+            <tbody>
                  <tr>
                     <td scope="col">{article.title}</td>
-                    <td scope="col">{article.author} </td>
-                    <td scope="col">{article.description}</td>
-                    <td scope="col">{article.url}</td>
+                    {/* <td scope="col">{article.author} </td> */}
+                    <td scope="col">{article.description}</td>       
+                    <td scope="col"><a href={article.url}>Click Here for Link</a></td>
                 </tr>
+                <br></br>
             </tbody>
+
+          
             
         
         )
@@ -63,6 +82,14 @@ class LockerRoom extends Component {
               </div>
             </div>
           </section>
+          <section className="section line"></section>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
         </body>
         <Footer />
       </div>

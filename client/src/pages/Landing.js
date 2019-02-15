@@ -76,11 +76,7 @@ class Landing extends Component {
           <section className="section">
           <img src="/images/logo-banner.jpg" alt="Logo"></img>
             <div className="container">
-              {/* <h1 className="title">Title</h1>
-              <h2 className="subtitle">
-                A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-                <strong>A LOGO WILL GO HERE</strong>
-              </h2> */}
+              
             </div>
           </section>
           <section>
