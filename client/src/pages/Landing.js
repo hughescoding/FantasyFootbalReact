@@ -112,7 +112,7 @@ class Landing extends Component {
                 <footer className="card-footer">
                   <p className="card-footer-item">
                     <span>
-                      <a class="button is-warning is-outlined" onClick={() => {this.toggleModal("register")}}>Register Now</a>
+                      <a className="button is-warning is-outlined" onClick={() => {this.toggleModal("register")}}>Register Now</a>
                     </span>
                   </p>
                   <p className="card-footer-item">
