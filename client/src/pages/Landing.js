@@ -5,6 +5,7 @@ import RegistrationModal from "../components/RegistrationModal/index";
 import LoginModal from "../components/LoginModal/index";
 import Footer from "../components/Footer/Footer";
 import LoginForm from "../components/LoginForm/index";
+// import Chat from "../components/Chat/Chat";
 // import RegisterDialog from "../components/RegisterDialog/index";
 import "bulma/css/bulma.css";
 import './styles.css';
@@ -80,6 +81,7 @@ class Landing extends Component {
             </div>
           </section>
           <section>
+            {/* <Chat /> */}
             <div className="container">
               <div className="card has-text-centered">
                 <div className="card-header has-text-centered ">

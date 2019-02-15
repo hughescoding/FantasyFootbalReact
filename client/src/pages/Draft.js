@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import Nav from "../components/navbar/index";
+import Chat from "../components/Chat/Chat";
 import Footer from "../components/Footer/Footer";
 import API from "../utils/API";
 import "bulma/css/bulma.css";
@@ -36,10 +37,11 @@ class Draft extends Component {
     return (
       <div >
         <body>
-              <Nav
+              <Nav/>  
               getPlayers={this.getPlayers}
-              />   
+               
               <div className="container">
+              <Chat/>
               <DraftTableBody/> 
               <DraftedTeam/> 
               </div>       
