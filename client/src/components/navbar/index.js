@@ -9,7 +9,7 @@ import "bulma/css/bulma.css";
 
   function Nav(props) {
     return (
-            <nav className="navbar" role="navigation" aria-label="main navigation">
+            <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
               <div className="navbar-brand">
               <img src="../../images/sm732.png" ></img>
                   {/* <div className="navbar-item">
@@ -25,25 +25,25 @@ import "bulma/css/bulma.css";
 
               <div id="navbarBasicExample" className="navbar-menu">
                 <div className="navbar-start">
-                  <a className="navbar-item">
-                    Locker Room
-                  </a>
+                  <a className="navbar-item" href="./LockerRoom">Locker Room</a>
+                  
+                  
 
-                  <a className="navbar-item">
-                    About
-                  </a>
+                  <a className="navbar-item"href="./About">About</a>
+                 
+                
 
-                  <div className="navbar-item has-dropdown is-hoverable">
+                  <div className="navbar-item has-dropdown is-boxed is-hoverable">
                     <a className="navbar-link">
                       League
                     </a>
 
                     <div className="navbar-dropdown">
                       <a className="navbar-item">
-                        Create a League
+                        Create a League **Coming Soon!
                       </a>
                       <a className="navbar-item">
-                        Join a League
+                        Join a League **Coming Soon!
                       </a>
                       <a className="navbar-item" onClick={props.getPlayers}>
                         Contact

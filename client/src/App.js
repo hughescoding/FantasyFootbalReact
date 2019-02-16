@@ -6,6 +6,7 @@ import './App.css';
 import Landing from "./pages/Landing";
 import LockerRoom from "./pages/LockerRoom";
 import Draft from "./pages/Draft";
+import About from "./pages/About";
 import './components/navbar/navbar.css';
 import './components/DraftTable/DraftTable.css';
 
@@ -18,6 +19,7 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/LockerRoom" component={LockerRoom} />
             <Route exact path="/Draft" component={Draft} />
+            <Route exact path="/About" component={About} />
             {/* <Route exact path="/MyProfile/:id?" component={MyProfile} /> */}
           </Switch>
         </Router>
