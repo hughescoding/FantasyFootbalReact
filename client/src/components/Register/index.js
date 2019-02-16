@@ -49,21 +49,22 @@ class Users extends Component {
               <Input
                 value={this.state.name}
                 onChange={this.handleInputChange}
-                name="name"
+                className="name"
                 placeholder="Name (required)"
               />
+              
               <Input
                 value={this.state.email}
                 type="email"
                 onChange={this.handleInputChange}
-                name="email"
+                className="email"
                 placeholder="Email (required)"
               />
               <Input
                 value={this.state.password}
                 type="password"
                 onChange={this.handleInputChange}
-                name="password"
+                className="password"
                 placeholder="Password (required)"
               />
               <FormBtn
