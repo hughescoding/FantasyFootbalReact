@@ -40,12 +40,30 @@ class Draft extends Component {
               <Nav/>  
               getPlayers={this.getPlayers}
                
-              <div className="container">
+              <div className="container popsm">
               <Chat/>
+              </div>
+              <div className="container popsm">
               <DraftTableBody/> 
               <DraftedTeam/> 
-              </div>       
+              </div>  
+              <section className="section line"></section>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
+                <div className="container"></div>
         </body>
+
         <Footer/>
       </div>
     );

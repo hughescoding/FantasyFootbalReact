@@ -46,15 +46,15 @@ class LockerRoom extends Component {
 
                 <div className="card-content has-text-centered">
   
-                  <button className="button news-button" onClick = {this.getArticles}>Get News</button>
+                  <button className="button news-button popsm" onClick = {this.getArticles}>Get News</button>
                   <br></br>
                   <hr></hr>
                   <thead>
                 <tr>
-                    <th className= "artTitle" scope="col">Title</th>
+                    <th className= "artTitle popsm" scope="col">Title</th>
                     {/* <th className="artAuthor" scope="col">Author</th> */}
-                    <th className="description" scope="col">Description</th>
-                    <th className="link" scope="col">Link</th>
+                    <th className="description popsm" scope="col">Description</th>
+                    <th className="link popsm" scope="col">Link</th>
                     
                 </tr>
             </thead>
@@ -64,7 +64,7 @@ class LockerRoom extends Component {
 
           
             
-            <tbody>
+            <tbody className ="popsm">
                  <tr>
                     <td scope="col">{article.title}</td>
                     {/* <td scope="col">{article.author} </td> */}
