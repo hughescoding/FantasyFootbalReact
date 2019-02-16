@@ -22,6 +22,9 @@ body {
     overflow: auto;
 }
 
+.team {
+    font-size: 36px;
+}
 .card-header {
     background-image: url(/images/pigskin.jpg);
 }
