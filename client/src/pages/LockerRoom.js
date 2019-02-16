@@ -2,16 +2,40 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import Nav from "../components/navbar/index";
 import Footer from "../components/Footer/Footer";
+import { Redirect } from "react-router-dom";
 import "bulma/css/bulma.css";
 import './styles.css';
 
 
 class LockerRoom extends Component {
+
+  logoutUser = () => {
+    console.log("this is connected")
+    localStorage.clear()
+    window.location.reload();
+    // localStorage.empty();
+
+  }
+
+  createTeam = () => {
+
+    console.log("connected")
+  }
+
+
   render() {
+    if (!localStorage.getItem('user')) {
+      return(
+        <Redirect to='/' />
+      );
+    }
     return (
       <div >
         <body>
-              <Nav/>           
+              <Nav
+              logout={this.logoutUser}
+              createTeam={this.createTeam}
+              />           
           <section>
             <div className="container">
               <div className="card has-text-centered">

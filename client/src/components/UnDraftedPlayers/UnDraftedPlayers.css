@@ -18,3 +18,8 @@ td {
     width: 100%;   
   }
 
+
+  .button {
+    float: left;
+    color:  #ffcc00;
+  }

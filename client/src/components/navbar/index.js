@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 // import API from "../../utils/API";
 // import { Link } from "react-router-dom";
-import { Input, FormBtn } from "../Form";
+// import { Link } from "react-router-dom";
+// import { Input, FormBtn } from "../Form";
 import "bulma/css/bulma.css";
-
-
 
 
   function Nav(props) {
@@ -25,8 +24,8 @@ import "bulma/css/bulma.css";
 
               <div id="navbarBasicExample" className="navbar-menu">
                 <div className="navbar-start">
-                  <a className="navbar-item">
-                    Locker Room
+                  <a className="navbar-item" href="/lockerroom">
+                  Locker Room
                   </a>
 
                   <a className="navbar-item">
@@ -39,8 +38,8 @@ import "bulma/css/bulma.css";
                     </a>
 
                     <div className="navbar-dropdown">
-                      <a className="navbar-item">
-                        Create a League
+                      <a className="navbar-item" onClick={props.createTeam}>
+                        Create a Team
                       </a>
                       <a className="navbar-item">
                         Join a League
@@ -55,7 +54,7 @@ import "bulma/css/bulma.css";
                 <div className="navbar-end">
                   <div className="navbar-item">
                     <div className="logout-button">
-                      <a className="button">
+                      <a className="button" onClick={props.logout}>
                         Logout
                       </a>
                     </div>

@@ -132,7 +132,9 @@ class Landing extends Component {
             modalState={this.state.modalState.register} 
             title="Create your Kingdom"
           >
-          <Users />
+          <Users 
+            closeModal={() => {this.toggleModal("register")}}
+          />
           </RegistrationModal>
          
           <LoginModal 
