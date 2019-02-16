@@ -50,7 +50,7 @@ class Users extends Component {
               <Input
                 value={this.state.name}
                 onChange={this.handleInputChange}
-                className="name"
+                name="name"
                 placeholder="Name (required)"
               />
               
