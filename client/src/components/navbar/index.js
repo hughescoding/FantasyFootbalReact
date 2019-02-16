@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 // import API from "../../utils/API";
 // import { Link } from "react-router-dom";
-import { Input, FormBtn } from "../Form";
+// import { Link } from "react-router-dom";
+// import { Input, FormBtn } from "../Form";
 import "bulma/css/bulma.css";
-
-
 
 
   function Nav(props) {

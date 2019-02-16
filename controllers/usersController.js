@@ -1,12 +1,11 @@
 const db = require("../models");
 const bcrypt = require('bcrypt');
-const { User } = require('../models');
 
 // Defining methods for the userController
 module.exports = {
   findAll: function (req, res) {
     db.FootballPlayers
-      .findAll(req.query)
+      .findAll()
       // .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
@@ -24,30 +23,43 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
-  login: async function (req, res) {
-    const { email, password } = req.body;
-    // if the username / password is missing, we use status code 400
-    // indicating a bad request was made and send back a message
-    if (!email || !password) {
-      return res.status(400).send(
-        'Request missing username or password param'
-      );
-    }
-    try {
-      let user = await Users.authenticate(email, password)
-  
-      user = await user.authorize();
-  
-      return res.json(user);
-  
-    } catch (err) {
-      return res.status(400).send('invalid username or password');
-    }
-  
-  }
-  
+  login: function (req, res) {
+    console.log(req.body)
+    const {email, password} = req.body
+    db.User
+      .findOne({ where: {email: email, password: password} })
+      .then(dbModel => res.json(dbModel)) 
+      .catch(err => res.status(422).json(err)); 
+      
+  },
 
-  }
+  draftPlayer: function(req, res) {
+    const {playerId, userId} = req.body
+    db.FootballPlayers
+      .update({ TeamId: userId },{ where: {id: playerId} })
+      // ('success', function (player) {
+      //   // Check if record exists in db
+      //   if (player) {
+      //     player.update({
+      //       TeamId: playerId
+      //     })
+          
+        
+      .then(function(affectedRows) {
+        db.FootballPlayers.findOne({where: {id: playerId}}).then(function(player) {
+          res.json(player)
+        })
+      })
+      .catch(err => res.status(422).json(err));
+      }
+      
+      }
+      // function(affectedRows) {
+        // Project.findAll().then(function(Projects) {
+            //  console.log(Projects) 
+        // })
+    
+      // )}
   // update: function(req, res) {
   //   db.Book
   //     .findOneAndUpdate({ _id: req.params.id }, req.body)
@@ -60,5 +72,4 @@ module.exports = {
   //     .then(dbModel => dbModel.remove())
   //     .then(dbModel => res.json(dbModel))
   //     .catch(err => res.status(422).json(err));
-  // }
-
+    // }

@@ -11,7 +11,8 @@ class Users extends Component {
     state = {
         name: "",
         email: "",
-        password: ""
+        password: "",
+        title: "Register"
       };
 
       handleInputChange = event => {
@@ -44,7 +45,7 @@ class Users extends Component {
   render() {
     return (
       <div>
-        <h2>Register</h2>
+        <h2>{this.state.title}</h2>
         <form>
               <Input
                 value={this.state.name}
