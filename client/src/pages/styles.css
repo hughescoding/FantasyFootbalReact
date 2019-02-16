@@ -9,7 +9,7 @@ body {
     color: #ffcc00
 }
 .card-header-title {
-    /* background-image: url(/images/pigskin.jpg); */
+    
     background-color: black;
     color: #ffcc00;
     border-radius: 10px;
@@ -47,12 +47,6 @@ th {
     font-size: 20px;
 }
 
-/* .artAuthor {
-    min-width: 100px;
-    color: #ffcc00;
-    text-align: center
-    
-} */
 
 button.news-button.button {
   margin-left: 550px;
