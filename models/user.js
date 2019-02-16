@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("User", {
