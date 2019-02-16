@@ -50,7 +50,7 @@ class Users extends Component {
               <Input
                 value={this.state.name}
                 onChange={this.handleInputChange}
-                className="name"
+                name="name"
                 placeholder="Name (required)"
               />
               
@@ -58,14 +58,14 @@ class Users extends Component {
                 value={this.state.email}
                 type="email"
                 onChange={this.handleInputChange}
-                className="email"
+                name="email"
                 placeholder="Email (required)"
               />
               <Input
                 value={this.state.password}
                 type="password"
                 onChange={this.handleInputChange}
-                className="password"
+                name="password"
                 placeholder="Password (required)"
               />
               <FormBtn
