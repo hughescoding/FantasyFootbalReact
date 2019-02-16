@@ -85,21 +85,21 @@ class Landing extends Component {
             <div className="container">
               <div className="card has-text-centered">
                 <div className="card-header has-text-centered ">
-                  <p className="card-header-title is-centered">
+                  <p className="card-header-title is-centered pop">
                     Join Gridiron Kings Today
                 </p>
                 </div>
                 <div className="card-content">
-                  <p className="content">
+                  <p className="content pop">
                     Tired of getting crushed in your weekly games?
                 </p>
-                  <p className="content">
+                  <p className="content pop">
                   It's time to rule your league and play like a KING!
                 </p>
-                  <p className="content">
+                  <p className="content pop">
                   Win the title, command respect, win big money!
                 </p>
-                  <p className="content">
+                  <p className="content pop">
                   Join Gridiron Kings and begin your conquest! 
                 </p>
                 </div>
