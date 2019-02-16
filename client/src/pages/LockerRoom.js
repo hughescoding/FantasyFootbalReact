@@ -36,8 +36,8 @@ class LockerRoom extends Component {
             <div className="container">
               <div className="card has-text-centered">
                 <div className="card-header has-text-centered has-text-justified">
-                  <p className="card-header-title is-centered">
-                    Join Gridiron Kings
+                  <p className="card-header-title is-centered pop">
+                    Locker Room
                 </p>
                 </div>
                 <div className="draftedTeam">
