@@ -167,7 +167,9 @@ class Draft extends Component {
           <Nav
             logout={this.logoutUser}
           />
+          <div className="card-content has-text-centered">
           <Chat/>
+          </div>
           <div className="container">
             <DraftTableBody
               filter={this.filterPlayers}
