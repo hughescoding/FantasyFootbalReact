@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import Nav from "../components/navbar/index";
+// import Chat from "../components/Chat/Chat";
 import Footer from "../components/Footer/Footer";
 import DraftedTeam from "../components/DraftedTeam/index";
 import "bulma/css/bulma.css";
@@ -31,6 +32,7 @@ class LockerRoom extends Component {
         <body>
               <Nav/>           
           <section>
+            {/* <Chat/> */}
             <div className="container">
               <div className="card has-text-centered">
                 <div className="card-header has-text-centered has-text-justified">
