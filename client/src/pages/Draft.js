@@ -167,6 +167,7 @@ class Draft extends Component {
           <Nav
             logout={this.logoutUser}
           />
+          <Chat/>
           <div className="container">
             <DraftTableBody
               filter={this.filterPlayers}

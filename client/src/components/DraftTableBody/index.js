@@ -57,7 +57,7 @@ constructor (props) {
        console.log(this.state)  
     return (
     // <div className="container">
-    <div className="table draftTable">
+    <div className="table draftTable popsm">
         
         <div className="input-field col s12">
             <select onChange={this.props.change} filter={this.props.filter} className="dropdown">
