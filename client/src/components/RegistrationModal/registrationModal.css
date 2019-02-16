@@ -1,5 +1,6 @@
  .modal-card-body {
     background-color: black;
+    
 }
 
 .modal-card-foot, .modal-card-head {
@@ -18,7 +19,12 @@ button.btn.btn-success {
     margin-right: 257px;
 }
 
+.modal-card {
+    width: 700px;
+    display: block;
+}
 
-
-
+form {
+    display: block;
+}
 
