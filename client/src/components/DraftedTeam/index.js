@@ -39,7 +39,7 @@ class DraftedTeam extends Component {
 
             <div className="table">
                 <table>
-                    <thead className="drafted">
+                <thead className="drafted popsm">
                         <tr>
                             {/* <th scope="col">Rank</th> */}
                             <th scope="col">Position Rank</th>
@@ -60,6 +60,7 @@ class DraftedTeam extends Component {
         )
     }
 
+ 
 }
 
 

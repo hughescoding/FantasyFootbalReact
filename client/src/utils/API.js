@@ -18,4 +18,7 @@ export default {
   draftPlayer: function(playerData) {
     return axios.put("/api/update", playerData)
   }
+
 };
+
+

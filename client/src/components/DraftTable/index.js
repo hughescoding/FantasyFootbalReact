@@ -5,8 +5,8 @@ import "./DraftTable.css"
 
 export function DraftTable() {
     return (
-        <div className = "draft-wrapper">
-           <div className="input-field col s12">
+        <div className = "draft-wrapper popsm">
+           <div className="input-field col s12 popsm">
             <select id="filter">
                 <option value="" disabled selected>Filter Player's by Position</option>
                 <option value="qb">Quarter Backs</option>
@@ -20,7 +20,7 @@ export function DraftTable() {
 
             </div>
 
-            <table className="table">
+            <table className="table popsm">
             <thead>
                 <tr>
                     <th scope="col">Rank</th>

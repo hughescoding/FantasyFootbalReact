@@ -6,14 +6,67 @@ body {
 }
 .card {
     background-color: black;
-    color: #ffcc00
+    color: #ffcc00;
+
 }
 .card-header-title {
+    
     background-color: black;
-    color: #ffcc00
+    color: #ffcc00;
+    border-radius: 10px;
+    font-size: 30px;
+    
 }
 
 .container {
     margin-top: 20px;
     overflow: auto;
+}
+
+.team {
+    font-size: 36px;
+}
+.card-header {
+    background-image: url(/images/pigskin.jpg);
+}
+
+.card-footer {
+    background-image: url(/images/pigskin.jpg);
+}
+
+.button.is-warning.is-outlined {
+    background-color: black;
+    border-color: #ffcc00;
+    color: #ffcc00;
+}
+/* 
+th {
+    min-width: 300px;
+} */
+
+.artTitle, .description, .link {
+    min-width: 400px;
+    color: #ffcc00;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+button.news-button.button {
+  margin-left: 550px;
+}
+
+a {
+    margin-left: 135px;
+}
+
+.draftedTeam{
+    margin-left: 240px;
+}
+.pop {
+    font-family: 'Staatliches', cursive;
+    font-size: 60px;
+}
+.popsm {
+    font-family: 'Staatliches', cursive;
 }

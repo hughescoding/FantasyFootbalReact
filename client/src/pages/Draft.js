@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from "react-router-dom";
 // import logo from './logo.svg';
 import Nav from "../components/navbar/index";
+import Chat from "../components/Chat/Chat";
 import Footer from "../components/Footer/Footer";
 import API from "../utils/API";
 import "bulma/css/bulma.css";
