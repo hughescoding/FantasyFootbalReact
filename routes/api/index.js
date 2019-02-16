@@ -11,6 +11,12 @@ router.route("/register")
 router.route("/players")
 .get(controller.findAll);
 
+router.route("/login")
+.post(controller.login)
+
+router.route("/update")
+.put(controller.draftPlayer)
+
 module.exports = router;
 
 // var db = require("../../models");

@@ -7,7 +7,7 @@ td {
   }
 
   .table {
-      width: 600px;
+      width: 800px;
       /* float: left; */
      
   }
@@ -18,3 +18,8 @@ td {
     width: 100%;   
   }
 
+
+  .button {
+    float: left;
+    color:  #ffcc00;
+  }

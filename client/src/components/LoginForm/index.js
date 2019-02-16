@@ -10,7 +10,8 @@ import { Input, FormBtn } from "../Form";
 class LoginForm extends Component {
     state = {
         email: "",
-        password: ""
+        password: "",
+        user: []
       };
 
       handleInputChange = event => {
@@ -24,13 +25,27 @@ class LoginForm extends Component {
       handleFormSubmit = event => {
         event.preventDefault();
         if (this.state.email && this.state.password) {
-          API.saveUser({
+          API.login({
             email: this.state.email,
             password: this.state.password
           })
-            .then(console.log(this.state.name + " is saved"))
+          .then(res => this.setState({user: res.data}, ()=>{
+
+            console.log(this.state.user);
+            localStorage.setItem('user', this.state.user.id);
+            console.log(localStorage);
+           
+
+          }))
+            // localStorage.setItem('user', user.name)
+            // console.log(localStorage)
+            // console.log()
+            // localStorage.setItem('user', res.user.id)
+            // localStorage.setItem("user", 'tugs')
+            // let quicktest = localStorage.getItem("user")
+            // console.log(quicktest)
             // .then(res => this.loadBooks())
-            .catch(err => console.log(err));
+            // .catch(err => console.log(err));
         }
       };
 
