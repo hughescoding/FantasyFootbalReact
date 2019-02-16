@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Nav from "../components/navbar/index";
 // import Chat from "../components/Chat/Chat";
 import Footer from "../components/Footer/Footer";
+import { Redirect } from "react-router-dom";
 import DraftedTeam from "../components/DraftedTeam/index";
 import "bulma/css/bulma.css";
 import './styles.css';
@@ -12,6 +13,22 @@ import key from "./config.js";
 
 
 class LockerRoom extends Component {
+
+  logoutUser = () => {
+    console.log("this is connected")
+    localStorage.clear()
+    window.location.reload();
+    // localStorage.empty();
+
+  }
+
+  createTeam = () => {
+
+    console.log("connected")
+  }
+
+
+
   state= {
     articles: []
   }
@@ -26,11 +43,19 @@ class LockerRoom extends Component {
   }
 
   render() {
+    if (!localStorage.getItem('user')) {
+      return(
+        <Redirect to='/' />
+      );
+    }
 
     return (
       <div >
         <body>
-              <Nav/>           
+              <Nav
+              logout={this.logoutUser}
+              createTeam={this.createTeam}
+              />           
           <section>
             {/* <Chat/> */}
             <div className="container">

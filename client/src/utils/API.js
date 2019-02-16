@@ -8,6 +8,15 @@ export default {
   
   saveUser: function(userData) {
     return axios.post("/api/register", userData);
+  },
+
+  login: function(userData) {
+    
+    return axios.post("/api/login", userData)
+  },
+
+  draftPlayer: function(playerData) {
+    return axios.put("/api/update", playerData)
   }
 
 };
