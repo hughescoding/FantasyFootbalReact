@@ -24,6 +24,7 @@
   
   .Message-content {
     display: inline-block;
+    
   }
   
   .currentMember > .Message-content {
@@ -43,6 +44,7 @@
     color: gray;
     font-size: 14px;
     padding-bottom: 4px;
+    font-family: 'Staatliches', cursive;
   }
   
   .Message-content > .text {
@@ -53,6 +55,7 @@
     background-color: cornflowerblue;
     color: white;
     display: inline-block;
+    
   }
   
   .currentMember > .Message-content .text {
