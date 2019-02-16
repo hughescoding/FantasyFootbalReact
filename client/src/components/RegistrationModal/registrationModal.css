@@ -21,10 +21,13 @@ button.btn.btn-success {
 
 .modal-card {
     width: 700px;
-    display: block;
 }
 
 form {
-    display: block;
+    display: block !important;
+}
+
+input {
+    width: 100%;
 }
 

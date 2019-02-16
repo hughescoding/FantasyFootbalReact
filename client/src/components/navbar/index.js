@@ -23,11 +23,12 @@ import "bulma/css/bulma.css";
 
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="/">
-        Home
-      </a>
+    
       <a class="navbar-item" href="./About">
         About
+      </a>
+      <a class="navbar-item" href="./Draft">
+        Draft
       </a>
       <a class="navbar-item" href="./LockerRoom">
         Locker Room
