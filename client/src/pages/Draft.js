@@ -163,11 +163,13 @@ class Draft extends Component {
     }
     return (
       <div >
-        <body>
+        <div>
           <Nav
             logout={this.logoutUser}
           />
+          <div className="card-content has-text-centered">
           <Chat/>
+          </div>
           <div className="container">
             <DraftTableBody
               filter={this.filterPlayers}
@@ -187,7 +189,7 @@ class Draft extends Component {
               ))}
             </DraftedTeam>
           </div>
-        </body>
+        </div>
         <Footer />
       </div>
     );

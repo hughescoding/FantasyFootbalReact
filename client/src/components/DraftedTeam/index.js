@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./DraftedTeam.css"
-import API from "../../utils/API";
+// import API from "../../utils/API";
 // import DraftButton from "../DraftButton"
 
 
