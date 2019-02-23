@@ -60,7 +60,7 @@ class Landing extends Component {
         }})
       }
 
-      // console.log(newRegister + " " + newLogin)
+ 
       // this.setState({modalState: {
       //   register: newRegister,
       //   login: newLogin
