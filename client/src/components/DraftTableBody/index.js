@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import "./DraftTableBody.css"
-import API from "../../utils/API";
-import DraftButton from "../DraftButton";
-import UnDraftedPlayers from '../UnDraftedPlayers/index'
+// import API from "../../utils/API";
+// import DraftButton from "../DraftButton";
+// import UnDraftedPlayers from '../UnDraftedPlayers/index'
 
 
 // let player= [];
@@ -61,8 +61,8 @@ constructor (props) {
         
         <div className="input-field col s12">
             <select onChange={this.props.change} filter={this.props.filter} className="dropdown">
-                <option value="" disabled selected>Filter Players by Position</option>
                 <option value="QB">Quarter Backs</option>
+                <option selected value="">Filter Players by Position</option>
                 <option value="RB">Running Backs</option>
                 <option value="WR">Wide Receivers</option>
                 <option value="TE">Tight Ends</option>
