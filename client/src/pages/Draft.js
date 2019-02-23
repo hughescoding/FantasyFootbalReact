@@ -163,7 +163,7 @@ class Draft extends Component {
     }
     return (
       <div >
-        <body>
+        <div>
           <Nav
             logout={this.logoutUser}
           />
@@ -189,7 +189,7 @@ class Draft extends Component {
               ))}
             </DraftedTeam>
           </div>
-        </body>
+        </div>
         <Footer />
       </div>
     );

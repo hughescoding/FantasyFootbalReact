@@ -12,7 +12,7 @@ class About extends Component {
         return (
           <div >
               <Nav/>
-            <body>
+            <div>
               <section className="section">
               <img src="/images/logo-banner.jpg" alt="Logo"></img>
                 <div className="container">
@@ -24,7 +24,7 @@ class About extends Component {
                   <div className="card has-text-centered">
                     <div className="card-header has-text-centered ">
                       <p className="card-header-title is-centered team">
-                     <img src="/images/sm732.png"></img> <span class="team popsm "> Gridiron Kings </span><img src="/images/sm731.png"></img>
+                     <img src="/images/sm732.png" alt="Grid IRon KIngs Logo"></img> <span className="team popsm "> Gridiron Kings </span><img src="/images/sm731.png" alt="Grid Iron Kings Logo"></img>
                     </p>
                     </div>
                     <div className="card-content">
@@ -37,11 +37,11 @@ class About extends Component {
                     <p className="content team popsm ">
                      Created By:
                     </p>
-                    <p className="content team popsm "><a href="https://github.com/hughescoding/FantasyFootbalReact"><i class="fab fa-github size: "></i></a></p>
-                    <img src="/images/TeamGK2.png" alt="Team Photo"></img>
+                    <p className="content team popsm "><a href="https://github.com/hughescoding/FantasyFootbalReact"><i className="fab fa-github size: "></i></a></p>
+                    <img src="/images/TeamGK2.png" alt="Team"></img>
                     <p className="content team popsm "></p>
                     <p className="content team popsm ">
-                    <a href="https://github.com/Shrublord5150"><i class="fas fa-crown"></i> Daniel Murphy</a><a href="https://hughescoding.github.io/portfolio/"> <i class="fas fa-crown"></i> Michael Hughes</a><a href="https://www.linkedin.com/in/alyssa-templeton-312bb153/"><i class="fas fa-crown"></i>Alyssa Templeton</a>
+                    <a href="https://github.com/Shrublord5150"><i className="fas fa-crown"></i> Daniel Murphy</a><a href="https://hughescoding.github.io/portfolio/"> <i className="fas fa-crown"></i> Michael Hughes</a><a href="https://www.linkedin.com/in/alyssa-templeton-312bb153/"><i className="fas fa-crown"></i>Alyssa Templeton</a>
                     </p>
                       {/* <p className="content">
                         
@@ -66,7 +66,7 @@ class About extends Component {
               <section className="section line"></section>
                     <div className="container"></div>
                     <div className="container"></div>
-            </body>
+            </div>
             <Footer/>
             </div>
            
