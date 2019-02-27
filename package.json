@@ -4,7 +4,7 @@
   "description": "Fantasy Football application using React",
   "engines": {
     "node": "8.11.3"
-  }
+  },
   "main": "server.js",
   "dependencies": {
     "axios": "^0.18.0",
