@@ -1,5 +1,5 @@
 const db = require("../models");
-const bcrypt = require('bcrypt');
+
 
 // Defining methods for the userController
 module.exports = {
@@ -29,7 +29,8 @@ module.exports = {
     db.User
       .findOne({ where: {email: email, password: password} })
       .then(dbModel => res.json(dbModel)) 
-      .catch(err => res.status(422).json(err)); 
+      .catch(err => res.status(422).json(err));  
+
       
   },
 

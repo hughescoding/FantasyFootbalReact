@@ -72,7 +72,7 @@ class Landing extends Component {
   render() {
     return (
       <div >
-        <body>
+        <div>
           <section className="section">
           <img src="/images/logo-banner.jpg" alt="Logo"></img>
             <div className="container">
@@ -122,7 +122,7 @@ class Landing extends Component {
           <section className="section line"></section>
                 <div className="container"></div>
                 <div className="container"></div>
-        </body>
+        </div>
 
          <RegistrationModal 
             closeModal={() => {this.toggleModal("register")}} 
