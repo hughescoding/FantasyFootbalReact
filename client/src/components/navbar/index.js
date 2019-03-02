@@ -33,9 +33,9 @@ import "bulma/css/bulma.css";
       <a className="navbar-item" href="./LockerRoom">
         Locker Room
       </a>
-      <button className="navbar-item" onClick={props.logout}>
+      <a className="navbar-item" onClick={props.logout}>
         Log Out
-      </button>
+      </a>
       </div>
     </div>
     
