@@ -25,9 +25,9 @@ if (process.env.NODE_ENV === "production") {
   }
 
 // Routes
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(path.join(__dirname, 'index.html')));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(path.join(__dirname, 'index.html')));
+// });
 app.use(routes);
 
 
