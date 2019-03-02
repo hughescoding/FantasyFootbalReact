@@ -14,7 +14,6 @@ import './styles.css';
 class Landing extends Component {
 //   constructor(props) {
 //     super(props);
-
 //   this.state = {
 //     registerOpen: false,
 //   };
@@ -61,7 +60,7 @@ class Landing extends Component {
         }})
       }
 
-      // console.log(newRegister + " " + newLogin)
+ 
       // this.setState({modalState: {
       //   register: newRegister,
       //   login: newLogin
@@ -73,7 +72,7 @@ class Landing extends Component {
   render() {
     return (
       <div >
-        <body>
+        <div>
           <section className="section">
           <img src="/images/logo-banner.jpg" alt="Logo"></img>
             <div className="container">
@@ -123,7 +122,7 @@ class Landing extends Component {
           <section className="section line"></section>
                 <div className="container"></div>
                 <div className="container"></div>
-        </body>
+        </div>
 
          <RegistrationModal 
             closeModal={() => {this.toggleModal("register")}} 

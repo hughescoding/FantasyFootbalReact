@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import API from "../../utils/API";
 // import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
@@ -8,10 +8,10 @@ import "bulma/css/bulma.css";
 
   function Nav(props) {
     return (
-      <nav class="navbar is-transparent">
-  <div class="navbar-brand">
-  <img src="../../images/sm732.png" ></img>
-    <a class="navbar-item" href="https://github.com/hughescoding/FantasyFootbalReact">
+      <nav className="navbar is-transparent">
+  <div className="navbar-brand">
+  <img src="../../images/sm732.png" alt="Grid Iron Kings Logo"></img>
+    <a className="navbar-item" href="https://github.com/hughescoding/FantasyFootbalReact">
      
     </a>
     {/* <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
@@ -21,31 +21,31 @@ import "bulma/css/bulma.css";
     </div> */}
   </div>
 
-  <div id="navbarExampleTransparentExample" class="navbar-menu">
-    <div class="navbar-start">
+  <div id="navbarExampleTransparentExample" className="navbar-menu">
+    <div className="navbar-start">
     
-      <a class="navbar-item" href="./About">
+      <a className="navbar-item" href="./About">
         About
       </a>
-      <a class="navbar-item" href="./Draft">
+      <a className="navbar-item" href="./Draft">
         Draft
       </a>
-      <a class="navbar-item" href="./LockerRoom">
+      <a className="navbar-item" href="./LockerRoom">
         Locker Room
       </a>
-      <a class="navbar-item" onClick={props.logout}>
+      <a className="navbar-item" onClick={props.logout}>
         Log Out
       </a>
       </div>
     </div>
     
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="field is-grouped">
-          <p class="control">
-            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000" target="_blank" href="https://twitter.com/intent/tweet?text=Check out Grid Iron Kings&amp;hashtags=GridIronKings&amp;url=https://github.com/hughescoding/FantasyFootbalReact">
-              <span class="icon">
-                <i class="fab fa-twitter"></i>
+    <div className="navbar-end">
+      <div className="navbar-item">
+        <div className="field is-grouped">
+          <p className="control">
+            <a className="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000" target="_blank" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?text=Check out Grid Iron Kings&amp;hashtags=GridIronKings&amp;url=https://github.com/hughescoding/FantasyFootbalReact">
+              <span className="icon">
+                <i className="fab fa-twitter"></i>
               </span>
               <span>
                 Tweet

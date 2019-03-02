@@ -2,11 +2,15 @@
   "name": "fantasyfootbalreact",
   "version": "1.0.0",
   "description": "Fantasy Football application using React",
+  "engines": {
+    "node": "8.11.3"
+  },
   "main": "server.js",
   "dependencies": {
     "axios": "^0.18.0",
     "bcrypt": "^3.0.4",
     "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
     "cookie-parser": "^1.4.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
@@ -19,10 +23,13 @@
     "nodemon": "^1.18.9"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon server.js\" \"npm run client\"",
     "server": "nodemon server.js",
-    "client": "yarn start --prefix client",
-    "dev": "concurrently \"nodemon server.js\" \"cd client && npm start\""
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"nodemon server.js\" \"cd client && npm start\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",

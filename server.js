@@ -18,13 +18,18 @@ app.use(express.urlencoded({ extended: false }));
 
 
 if (process.env.NODE_ENV === "production") {
+  console.log("production")
     app.use(express.static("client/build"));
   } else {
     app.use(express.static("client/public"));
   }
 
 // Routes
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(path.join(__dirname, 'index.html')));
+// });
 app.use(routes);
+
 
 var syncOptions = { force: false};
 
