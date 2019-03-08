@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import API from "../../utils/API";
 // import { Link } from "react-router-dom";
 import { Input, FormBtn } from "../Form";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {Redirect} from 'react-router-dom';
+// import Draft from "../../pages/Draft";
 
 // import './register.css';
 
@@ -11,7 +14,8 @@ class LoginForm extends Component {
     state = {
         email: "",
         password: "",
-        user: []
+        user: [],
+        redirect:false
       };
 
       handleInputChange = event => {
@@ -29,26 +33,21 @@ class LoginForm extends Component {
             email: this.state.email,
             password: this.state.password
           })
-          .then(res => this.setState({user: res.data}, ()=>{
+          .then(res => this.setState({user: res.data, redirect: true}, ()=>{
 
             console.log(this.state.user);
             localStorage.setItem('user', this.state.user.id);
-            console.log(localStorage);
-           
-
+            console.log(this.state.redirect)
+            console.log(localStorage)
           }))
-            // localStorage.setItem('user', user.name)
-            // console.log(localStorage)
-            // console.log()
-            // localStorage.setItem('user', res.user.id)
-            // localStorage.setItem("user", 'tugs')
-            // let quicktest = localStorage.getItem("user")
-            // console.log(quicktest)
-            // .then(res => this.loadBooks())
-            // .catch(err => console.log(err));
         }
       };
 
+      renderRedirect = () => {
+        if (this.state.redirect) {
+          return <Redirect to="/draft"/>
+        }
+      }
     // componentDidMount() {
     //     fetch('/api/players')
     //     .then(res => res.json())
@@ -74,6 +73,7 @@ class LoginForm extends Component {
                 name="password"
                 placeholder="Password (required)"
               />
+              {this.renderRedirect()}
               <FormBtn
                 disabled={!(this.state.email && this.state.password)}
                 onClick={this.handleFormSubmit}
