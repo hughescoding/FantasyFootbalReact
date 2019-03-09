@@ -12,6 +12,7 @@ import DraftedTeam from '../components/DraftedTeam/index';
 import UnDraftedPlayers from "../components/UnDraftedPlayers/index";
 import DraftedPlayers from "../components/DraftedPlayers/index";
 
+
 class Draft extends Component {
 
   constructor(props) {
@@ -21,6 +22,10 @@ class Draft extends Component {
       playerPosition: '',
       draftedPlayers: []
     };
+  }
+
+  componentDidMount() {
+    window.addEventListener('load', this.getPlayers);
   }
 
   getPlayer = (player) => {
@@ -76,9 +81,7 @@ class Draft extends Component {
 
   };
 
-  componentDidMount() {
-    window.addEventListener('load', this.getPlayers);
-  }
+  
   //Thank you Ben! 
   filterPlayers = (player) => {
     return (player.player_position === this.state.playerPosition || this.state.playerPosition === '')
@@ -172,6 +175,7 @@ class Draft extends Component {
           <Chat/>
           </div>
           <div className="container">
+          {this.componentDidMount}
             <DraftTableBody
               filter={this.filterPlayers}
               change={this.onChange}
