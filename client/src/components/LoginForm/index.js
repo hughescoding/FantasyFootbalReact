@@ -45,7 +45,7 @@ class LoginForm extends Component {
 
       renderRedirect = () => {
         if (this.state.redirect) {
-          return <Redirect to="/draft"/>
+          return <Redirect to="/lockerroom"/>
         }
       }
     // componentDidMount() {
