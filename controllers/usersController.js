@@ -34,8 +34,20 @@ module.exports = {
       
   },
 
+  loadLocker: function (req, res) {
+    let playerid = JSON.parse(req.query.userID).userId
+    
+    
+    db.FootballPlayers
+    .findAll({ where: {TeamId: playerid} })
+    .then(function(player){
+      res.json(player)
+    })
+  },
+
   draftPlayer: function(req, res) {
     const {playerId, userId} = req.body
+    console.log(userId)
     db.FootballPlayers
       .update({ TeamId: userId },{ where: {id: playerId} })
       // ('success', function (player) {

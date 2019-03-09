@@ -1,0 +1,23 @@
+td {
+    border: 1px solid black;
+  }
+
+  .draft-wrapper {
+      margin-top: 100px;
+  }
+
+  .table {
+      width: 100%px;
+      float: left;
+      margin: 10px;
+      margin-top: 20px;
+      
+  }
+
+  .popsm {
+    font-family: 'Staatliches', cursive;
+
+}
+    .locker-table-title{
+        font-size: 30px;
+    }
