@@ -17,6 +17,10 @@ export default {
 
   draftPlayer: function(playerData) {
     return axios.put("/api/update", playerData)
+  },
+
+  loadLocker: function(userID) {
+    return axios.get("/api/loadlocker", {params: {userID: userID}})
   }
 
 };

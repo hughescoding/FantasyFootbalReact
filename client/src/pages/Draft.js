@@ -34,7 +34,7 @@ class Draft extends Component {
 
 
     let userId = localStorage.getItem('user')
-
+    console.log(userId + " " + "This is the value of userId")
 
     API.draftPlayer({ playerId, userId })
       .then(res => {
@@ -45,6 +45,7 @@ class Draft extends Component {
           return player.id !== playerId
         })
         this.setState({ players: players, draftedPlayers: draftedPlayers })
+        console.log(userId)
       })
 
 
@@ -86,12 +87,12 @@ class Draft extends Component {
     return (player.player_position === this.state.playerPosition || this.state.playerPosition === '')
   }
 
-  filterDraftedPlayers = (player) => {
-    console.log(player.TeamId)
-    let userId = localStorage.getItem('user')
-    return(player.TeamId === userId )
+  // filterDraftedPlayers = (player) => {
+  //   console.log(player.TeamId)
+  //   let userId = localStorage.getItem('user')
+  //   return(player.TeamId === userId )
     
-  }
+  // }
 
   onChange = (event) => {
 

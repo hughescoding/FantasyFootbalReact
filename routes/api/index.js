@@ -17,6 +17,9 @@ router.route("/login")
 router.route("/update")
 .put(controller.draftPlayer)
 
+router.route("/loadLocker")
+.get(controller.loadLocker)
+
 module.exports = router;
 
 // var db = require("../../models");

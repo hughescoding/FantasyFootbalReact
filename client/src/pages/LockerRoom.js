@@ -3,16 +3,25 @@ import React, { Component } from 'react';
 import Nav from "../components/navbar/index";
 import Footer from "../components/Footer/Footer";
 import { Redirect } from "react-router-dom";
-import DraftedTeam from "../components/DraftedTeam/index";
+import LockerContainer from "../components/LockerContainer/index";
+import LockerTeam from "../components/LockerTeam/index";
 import "bulma/css/bulma.css";
 import './styles.css';
 import axios from "axios";
 import key from "./config.js";
+import API from '../utils/API';
 
 
 
 class LockerRoom extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      articles: [],
+      draftedTeam: [],
+    };
+  }
   logoutUser = () => {
     console.log("this is connected")
     localStorage.clear()
@@ -28,9 +37,7 @@ class LockerRoom extends Component {
 
 
 
-  state = {
-    articles: []
-  }
+
 
   getArticles = () => {
     console.log(key);
@@ -39,6 +46,29 @@ class LockerRoom extends Component {
         console.log(response);
         this.setState({ articles: response.data.articles })
       })
+  }
+
+  loadPlayers = () => {
+
+    let userId = +localStorage.getItem('user')
+
+
+    API.loadLocker({ userId })
+      .then(res => {
+        let draftedTeam = this.state.draftedTeam;
+
+        for (let i = 0; i < res.data.length; i++) {
+
+          draftedTeam.push(res.data[i])
+        }
+        this.setState({ draftedTeam: draftedTeam })
+        console.log(this.state.draftedTeam)
+      })
+  }
+
+
+  componentDidMount() {
+    window.addEventListener('load', this.loadPlayers);
   }
 
   render() {
@@ -65,7 +95,11 @@ class LockerRoom extends Component {
                 </p>
                 </div>
                 <div className="draftedTeam">
-                  <DraftedTeam />
+                  <LockerContainer>
+                    {this.state.draftedTeam.map(player => (
+                      <LockerTeam id={player.id} key={player.id} player_name={player.player_name} rank={player.rank} position_rank={player.position_rank} nfl_team={player.nfl_team} draft_avg={player.draft_avg} bye_week={player.bye_week} />
+                    ))}
+                  </LockerContainer>
                 </div>
 
                 <div className="card-content has-text-centered">
@@ -74,15 +108,15 @@ class LockerRoom extends Component {
                   <br></br>
                   <hr></hr>
                   {/* <table> */}
-                    <thead>
-                      <tr>
-                        <th className="artTitle popsm" scope="col">Title</th>
-                        {/* <th className="artAuthor" scope="col">Author</th> */}
-                        <th className="description popsm" scope="col">Description</th>
-                        <th className="link popsm" scope="col">Link</th>
+                  <thead>
+                    <tr>
+                      <th className="artTitle popsm" scope="col">Title</th>
+                      {/* <th className="artAuthor" scope="col">Author</th> */}
+                      <th className="description popsm" scope="col">Description</th>
+                      <th className="link popsm" scope="col">Link</th>
 
-                      </tr>
-                    </thead>
+                    </tr>
+                  </thead>
                   {/* </table> */}
                   {this.state.articles.map(article =>
                     (
