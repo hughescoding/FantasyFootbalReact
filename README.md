@@ -1,7 +1,7 @@
 
 # Grid Iron Kings a fantasy football companion app
 
- ![Logo](/logo-Square.jpg)
+ ![Logo](https://github.com/hughescoding/FantasyFootbalReact/blob/master/client/public/images/logo-Square.jpg)
 
 To Use, download the app, install dependancies, get news API key
 
